@@ -150,10 +150,10 @@ android {
             buildConfigField("String", "BRANCH_NAME", "\"$gitBranch\"")
             // Get remote url as BuildConfig.REMOTE_URL
             buildConfigField("String", "REMOTE_URL", "\"$gitRemote\"")
-            buildConfigField("boolean", "ENABLE_AUTO_UPDATER", "true")
+            buildConfigField("boolean", "ENABLE_AUTO_UPDATER", "false")
             buildConfigField("boolean", "DEFAULT_ENABLE_CRASH_REPORTING", "true")
             buildConfigField("boolean", "DEFAULT_ENABLE_CRASH_REPORTING_PII", "true")
-            buildConfigField("boolean", "DEFAULT_ENABLE_ANALYTICS", "true")
+            buildConfigField("boolean", "DEFAULT_ENABLE_ANALYTICS", "false")
             buildConfigField("boolean", "ENABLE_PROTECTION", "true")
             // Get the androidacy client ID from the androidacy.properties
 
