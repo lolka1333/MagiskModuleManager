@@ -38,7 +38,6 @@ enum class NotificationType(
     var special: Boolean = false
 ) : NotificationTypeCst {
 
-    @JvmStatic
     DEBUG(R.string.debug_build,
         R.drawable.ic_baseline_bug_report_24,
         com.google.android.material.R.attr.colorPrimary,
@@ -66,7 +65,6 @@ enum class NotificationType(
         }
     },
 
-    @JvmStatic
     SHOWCASE_MODE(
         R.string.showcase_mode,
         R.drawable.ic_baseline_lock_24,
@@ -78,7 +76,6 @@ enum class NotificationType(
         }
     },
 
-    @JvmStatic
     NO_ROOT(R.string.fail_root_magisk, R.drawable.ic_baseline_numbers_24) {
         override fun shouldRemove(): Boolean {
             return InstallerInitializer.errorNotification !== this
@@ -90,7 +87,6 @@ enum class NotificationType(
         }
     },
 
-    @JvmStatic
     MAGISK_OUTDATED(R.string.magisk_outdated,
         R.drawable.ic_baseline_update_24,
         View.OnClickListener { v: View ->
@@ -103,21 +99,18 @@ enum class NotificationType(
         }
     },
 
-    @JvmStatic
     NO_INTERNET(R.string.fail_internet, R.drawable.ic_baseline_cloud_off_24) {
         override fun shouldRemove(): Boolean {
             return RepoManager.getINSTANCE()!!.hasConnectivity()
         }
     },
 
-    @JvmStatic
     REPO_UPDATE_FAILED(R.string.repo_update_failed, R.drawable.ic_baseline_cloud_off_24) {
         override fun shouldRemove(): Boolean {
             return RepoManager.getINSTANCE()!!.isLastUpdateSuccess
         }
     },
 
-    @JvmStatic
     NEED_CAPTCHA_ANDROIDACY(R.string.androidacy_need_captcha,
         R.drawable.ic_baseline_refresh_24,
         View.OnClickListener { v: View ->
@@ -130,14 +123,12 @@ enum class NotificationType(
         }
     },
 
-    @JvmStatic
     NO_WEB_VIEW(R.string.no_web_view, R.drawable.ic_baseline_android_24) {
         override fun shouldRemove(): Boolean {
             return Http.hasWebView()
         }
     },
 
-    @JvmStatic
     UPDATE_AVAILABLE(
         R.string.app_update_available,
         R.drawable.ic_baseline_system_update_24,
@@ -166,7 +157,6 @@ enum class NotificationType(
         }
     },
 
-    @JvmStatic
     INSTALL_FROM_STORAGE(
         R.string.install_from_storage,
         R.drawable.ic_baseline_storage_24,
