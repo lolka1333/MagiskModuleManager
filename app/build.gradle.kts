@@ -154,7 +154,7 @@ android {
             buildConfigField("boolean", "DEFAULT_ENABLE_CRASH_REPORTING", "true")
             buildConfigField("boolean", "DEFAULT_ENABLE_CRASH_REPORTING_PII", "true")
             buildConfigField("boolean", "DEFAULT_ENABLE_ANALYTICS", "false")
-            buildConfigField("boolean", "ENABLE_PROTECTION", "true")
+            buildConfigField("boolean", "ENABLE_PROTECTION", "false")
             // Get the androidacy client ID from the androidacy.properties
 
             val propertiesA = Properties()
@@ -206,8 +206,8 @@ android {
             buildConfigField("boolean", "ENABLE_AUTO_UPDATER", "false")
             buildConfigField("boolean", "DEFAULT_ENABLE_CRASH_REPORTING", "true")
             buildConfigField("boolean", "DEFAULT_ENABLE_CRASH_REPORTING_PII", "true")
-            buildConfigField("boolean", "DEFAULT_ENABLE_ANALYTICS", "true")
-            buildConfigField("boolean", "ENABLE_PROTECTION", "true")
+            buildConfigField("boolean", "DEFAULT_ENABLE_ANALYTICS", "false")
+            buildConfigField("boolean", "ENABLE_PROTECTION", "false")
             // Get the androidacy client ID from the androidacy.properties
 
             val propertiesA = Properties()
@@ -262,7 +262,7 @@ android {
             buildConfigField("boolean", "DEFAULT_ENABLE_CRASH_REPORTING", "false")
             buildConfigField("boolean", "DEFAULT_ENABLE_CRASH_REPORTING_PII", "false")
             buildConfigField("boolean", "DEFAULT_ENABLE_ANALYTICS", "false")
-            buildConfigField("boolean", "ENABLE_PROTECTION", "true")
+            buildConfigField("boolean", "ENABLE_PROTECTION", "false")
 
             // Repo with ads or tracking feature are disabled by default for the
             // F-Droid flavor. at the same time, the alt repo isn"t particularly trustworthy
