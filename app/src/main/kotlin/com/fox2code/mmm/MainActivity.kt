@@ -225,6 +225,14 @@ class MainActivity : AppCompatActivity(), OnRefreshListener, OverScrollHelper {
             return
         }
 
+        // hide this behind a buildconfig flag for now, but crash the app if it's not an official build and not debug
+        if (BuildConfig.ENABLE_PROTECTION && !MainApplication.o && !BuildConfig.DEBUG) {
+            throw RuntimeException("This is not an official build of AMM")
+        } else if (!MainApplication.o && !BuildConfig.DEBUG) {
+            Timber.w("You may be running an untrusted build.")
+            // Show a toast to warn the user
+            Toast.makeText(this, R.string.not_official_build, Toast.LENGTH_LONG).show()
+        }
         // track enabled repos
         Thread {
             val db = Room.databaseBuilder(
