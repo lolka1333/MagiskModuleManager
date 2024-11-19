@@ -31,19 +31,6 @@ android {
     namespace = "com.fox2code.mmm"
     compileSdk = 34
     ndkVersion = "25.2.9519653"
-    signingConfigs {
-        create("release") {
-            if (File("signing.properties").exists()) {
-                val properties = Properties().apply {
-                    load(File("signing.properties").reader())
-                }
-                storeFile = File(properties.getProperty("storeFilePath"))
-                storePassword = properties.getProperty("storePassword")
-                keyPassword = properties.getProperty("keyPassword")
-                keyAlias = properties.getProperty("keyAlias")
-            }
-        }
-    }
     defaultConfig {
         applicationId = "com.fox2code.mmm"
         minSdk = 26
